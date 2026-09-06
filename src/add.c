@@ -83,12 +83,3 @@ void addition_op(List *head1, List *tail1, List *head2, List *tail2, List **res_
     (*res_head)->prev = new_node;
     *res_head = new_node;
 }
-
-void print_result(List *head, List *tail) {
-    printf("Result: ");
-    while (head) {
-        printf("%d", head->data);
-        head=head->next;
-    }
-    printf("\n");
-}

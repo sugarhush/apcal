@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "sub.h"
 #include "types.h"
 #include "validate.h"
 #include "add.h"
+#include "common.h"
 
 int main(int argc, char **argv)
 {
@@ -36,6 +38,12 @@ int main(int argc, char **argv)
     //Addition Operation
     List *res_head=NULL, *res_tail=NULL;
     addition_op(head1, tail1, head2, tail2, &res_head, &res_tail);
+
+    print_result(res_head, res_tail);
+
+    //Subtraction Operation
+    res_head=NULL; res_tail=NULL;
+    subtraction_op(head1, tail1, head2, tail2, &res_head, &res_tail);
 
     print_result(res_head, res_tail);
     return SUCCESS;
